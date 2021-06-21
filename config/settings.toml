@@ -1,0 +1,8 @@
+[development]
+TIS_URL = "http://localhost:9000"
+ELASTICSEARCH_HOST = "localhost:9200"
+STUDY_INDEX_PREFIX = ""
+REDIS_HOST = "localhost"
+REDIS_PORT = 6379
+REDIS_PASSWORD = ""
+REDIS_DB = 1

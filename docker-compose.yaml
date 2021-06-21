@@ -1,0 +1,23 @@
+version: "3.3"
+services:
+  flask-sample:
+    image:
+    container_name: flask-sample
+    ports:
+      - 8080:8080
+    environment:
+      GUNICORN_WORKERS: 8
+      GUNICORN_PORT: 8080
+      ENVVAR_PREFIX_FOR_DYNACONF: APP
+      ENV_FOR_DYNACONF: production
+      APP_ELASTICSEARCH_HOST: "localhost:9200"
+      APP_STUDY_INDEX_PREFIX: ""
+      APP_REDIS_HOST: "localhost"
+      APP_REDIS_PORT: 6379
+      APP_REDIS_DB: 1
+      APP_REDIS_PASSWORD: ""
+    logging:
+      driver: "json-file"
+      options:
+        max-file: "10"
+        max-size: 20m

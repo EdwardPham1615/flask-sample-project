@@ -1,0 +1,19 @@
+stages:
+  - tests
+  - builds
+  - push-image
+
+tests:
+  stage: tests
+  script:
+    - make tests
+
+builds:
+  stage: builds
+  script:
+    - make build
+
+push-image:
+  stage: push-image
+  script:
+    - make push-image
